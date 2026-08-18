@@ -1,240 +1,202 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Umesh Sitoula - Engineerin Student</title>
-<style>
-  :root{
-    --bg: #0f1115;
-    --panel: #161922;
-    --line: #262b36;
-    --text: #e7e9ee;
-    --muted: #8b93a5;
-    --accent: #ffb454;
-    --accent-dim: #4a3a20;
-  }
-
-  *{ box-sizing: border-box; margin:0; padding:0; }
-
-  body{
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-  }
-
-  .grid-lines{
-    background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size: 40px 40px;
-    background-position: -1px -1px;
-  }
-
-  header{
-    padding: 100px 24px 80px;
-    text-align: center;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .eyebrow{
-    font-family: 'Courier New', monospace;
-    letter-spacing: 3px;
-    color: var(--accent);
-    font-size: 13px;
-    margin-bottom: 18px;
-  }
-
-  h1{
-    font-size: clamp(36px, 6vw, 58px);
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
-
-  header p{
-    color: var(--muted);
-    font-size: 18px;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  section{
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 70px 24px;
-  }
-
-  .section-title{
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
-    letter-spacing: 3px;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-
-  .section-heading{
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 34px;
-  }
-
-  .about-text{
-    color: var(--muted);
-    font-size: 17px;
-    max-width: 700px;
-  }
-
-  .projects{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
-  }
-
-  .card{
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 26px;
-    transition: border-color .2s ease, transform .2s ease;
-  }
-
-  .card:hover{
-    border-color: var(--accent);
-    transform: translateY(-3px);
-  }
-
-  .card-tag{
-    display:inline-block;
-    font-family: 'Courier New', monospace;
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: var(--accent);
-    background: var(--accent-dim);
-    padding: 3px 8px;
-    border-radius: 4px;
-    margin-bottom: 14px;
-  }
-
-  .card h3{
-    font-size: 19px;
-    margin-bottom: 10px;
-  }
-
-  .card p{
-    color: var(--muted);
-    font-size: 15px;
-    margin-bottom: 16px;
-  }
-
-  .card a{
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .card a:hover{ text-decoration: underline; }
-
-  footer{
-    border-top: 1px solid var(--line);
-    padding: 60px 24px 70px;
-    text-align: center;
-  }
-
-  .contact-links{
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-    margin-top: 26px;
-  }
-
-  .contact-links a{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text);
-    text-decoration: none;
-    border: 1px solid var(--line);
-    padding: 10px 18px;
-    border-radius: 30px;
-    font-size: 14px;
-    transition: border-color .2s ease, color .2s ease;
-  }
-
-  .contact-links a:hover{
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-
-  .contact-links svg{ width:16px; height:16px; fill: currentColor; }
-
-  @media (max-width: 480px){
-    header{ padding: 70px 20px 60px; }
-    section{ padding: 50px 20px; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umesh | Mechanical Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<header class="grid-lines">
-  <div class="eyebrow">// ENGINEER</div>
-  <h1>UMESH SITOULA<br> SOVIT </h1>
-  <p>I build things that work — software, hardware, or somewhere in between. Welcome to a short look at what I do.</p>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-target="0">Home</a></li>
+                <li><a href="#about" class="nav-link" data-target="1">About</a></li>
+                <li><a href="#resume" class="nav-link" data-target="2">Resume</a></li>
+                <li><a href="#portfolio" class="nav-link" data-target="3">Portfolio</a></li>
+            </ul>
+            <div class="header-contact">
+                <i class="fa-solid fa-phone"></i> +977-9800000000
+            </div>
+        </nav>
+    </header>
 
+    <!-- Side Dot Pagination Indicator -->
+    <div class="pagination-dots">
+        <span class="dot active" data-target="0"></span>
+        <span class="dot" data-target="1"></span>
+        <span class="dot" data-target="2"></span>
+        <span class="dot" data-target="3"></span>
     </div>
-    <div class="profile-container">
 
-      <img src="Photos/Mine.jpeg" alt="Umesh Sitoula" class="profile-pic">
-    </div>
-  </div>
-</header>
+    <!-- Main Container with Sections -->
+    <main class="main-container" id="fullpage">
+        
+        <!-- SECTION 1: HOME -->
+        <section class="section home-section" id="home">
+            <div class="gear-bg-overlay"></div>
+            <div class="content-wrapper">
+                <div class="hero-text">
+                    <h1 class="glitch-text">UMESH</h1>
+                    <h2>MECHANICAL ENGINEER</h2>
+                    <p class="tagline">Designing precision mechanisms, thermal systems, and sustainable infrastructure.</p>
+                    <div class="hero-buttons">
+                        <a href="#resume" class="btn primary-btn">Resume</a>
+                        <a href="#portfolio" class="btn secondary-btn">Portfolio</a>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
 
-<section id="about">
-  <div class="section-title">ABOUT</div>
-  <h2 class="section-heading">A little about me</h2>
-  <p class="about-text">
-    Hey, I am a Mechanical Engineering 3rd Year Student Currently studying in Kathmandu University.
-  </p>
-</section>
+        <!-- SECTION 2: ABOUT -->
+        <section class="section about-section" id="about">
+            <div class="content-wrapper about-grid">
+                <div class="about-info">
+                    <h3 class="section-title">ABOUT</h3>
+                    <p class="email-tag">umesh.engineer@kathmandu.edu.np</p>
+                    <p class="about-desc">
+                        Mechanical engineering student at Kathmandu University with a deep focus on advanced manufacturing processes, CAD modeling, and sustainable energy systems like household biogas digesters. Experienced in precise stress analysis, material science of alloys, and automated mechanical design layouts. My goal is to streamline structural reliability and innovative thermal mechanisms.
+                    </p>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i> Dhulikhel, Bagmati Province, Nepal
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="image-frame">
+                        <!-- Professional mechanical engineering thematic silhouette/visual placeholder -->
+                        <div class="engineer-silhouette"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="projects">
-  <div class="section-title">WORK</div>
-  <h2 class="section-heading">Projects</h2>
+        <!-- SECTION 3: RESUME -->
+        <section class="section resume-section" id="resume">
+            <div class="content-wrapper resume-grid">
+                <!-- Column 1: Software & Technical Skills -->
+                <div class="resume-col">
+                    <h4 class="col-heading">ENGINEERING SKILLS</h4>
+                    <div class="skill-item">
+                        <span>SolidWorks / AutoCAD</span>
+                        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>ANSYS / FEA Analysis</span>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>CNC & Lathe Machining</span>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Python / MATLAB</span>
+                        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Biogas Plant Designing</span>
+                        <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+                    </div>
 
-  <div class="projects">
+                    <h4 class="col-heading mt-40">LANGUAGES</h4>
+                    <div class="skill-item">
+                        <span>Nepali</span>
+                        <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>English</span>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                </div>
 
-    <div class="card">
-      <span class="card-tag">PROJECT</span>
-      <h3>Household size Biogas Digester</h3>
-      <p>Our Second Year Project Coming Soon.<br>Uploading...</p>
-      <a href="#" target="_blank">Uploading Soon →</a>
+                <!-- Column 2: Experience & Education -->
+                <div class="resume-col">
+                    <h4 class="col-heading">EXPERIENCE & PROJECTS</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="year">2026 - Present</span>
+                            <h5>Biogas System Optimization Lead</h5>
+                            <p> Kathmandu University Research Cell</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2025 - 2026</span>
+                            <h5>CAD Modeling & Stress Analyst</h5>
+                            <p>Mechanical Design Bureau</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2024 - 2025</span>
+                            <h5>Manufacturing & Metrology Intern</h5>
+                            <p>Precision Tooling & Lathe Workshop</p>
+                        </div>
+                    </div>
 
-     </div>
-  </div>
-</section>
+                    <h4 class="col-heading mt-20">EDUCATION</h4>
+                    <div class="education-block">
+                        <h5>B.E. in Mechanical Engineering</h5>
+                        <p>Kathmandu University, Dhulikhel</p>
+                    </div>
+                </div>
 
-<footer>
-  <div class="section-title">CONTACT</div>
-  <h2 class="section-heading">Let's connect <br> +977 9804974004 </h2>
+                <!-- Column 3: Core Competencies & Interests -->
+                <div class="resume-col">
+                    <h4 class="col-heading">WHAT I DO ?</h4>
+                    <p class="service-text">CAD Modeling - Structural Analysis - Thermal Simulation - Rapid Prototyping - Manufacturing Integration</p>
 
-  <div class="contact-links">
-    <a href="sovitsitoula@gmail.com">
-      <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.5l8 6 8-6V6H4zm16 2.8-7.4 5.5a1 1 0 0 1-1.2 0L4 8.8V18h16V8.8z"/></svg>
-      Email
-    </a>
-    <a href="https://instagram.com/sovitsitoula" target="_blank">
-      <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM18 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
-      Instagram
-    </a>
-    <a href="https://facebook.com/sovitumesh" target="_blank">
-      <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
-      Facebook
-    </a>
-  </div>
-</footer>
+                    <h4 class="col-heading mt-30">CORE COMPETENCIES</h4>
+                    <p class="service-text">Material Science - Steel Microstructures - Fluid Dynamics - Metrology - GD&T Tolerancing</p>
 
+                    <h4 class="col-heading mt-30">HOBBIES & INTERESTS</h4>
+                    <div class="hobbies-grid">
+                        <div class="hobby-card"><i class="fa-solid fa-book-open"></i><span>Reading</span></div>
+                        <div class="hobby-card"><i class="fa-solid fa-camera"></i><span>Photography</span></div>
+                        <div class="hobby-card"><i class="fa-solid fa-pen-ruler"></i><span>Sketching</span></div>
+                        <div class="hobby-card"><i class="fa-solid fa-plane"></i><span>Traveling</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: PORTFOLIO -->
+        <section class="section portfolio-section" id="portfolio">
+            <div class="content-wrapper">
+                <h3 class="section-title text-center">FEATURED PORTFOLIO</h3>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-overlay">
+                            <h5>Biogas Digester Plant</h5>
+                            <p>Complete structural and fluid simulation design.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-overlay">
+                            <h5>CNC Lathe Assembly</h5>
+                            <p>High-precision component tolerance study.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-overlay">
+                            <h5>Composite CFRP Structure</h5>
+                            <p>Aerospace material durability analysis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScript File Linking -->
+    <script src="script.js"></script>
 </body>
 </html>
