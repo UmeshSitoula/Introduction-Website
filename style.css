@@ -449,8 +449,8 @@ html, body {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.portfolio-item:nth-child(1) { background: url('Photos/Mine.jpeg') center/cover; }
-.portfolio-item:nth-child(2) { background: url('Photos/Mine.jpeg') center/cover; }
+.portfolio-item:nth-child(1) { background: url('Photos/First Year Project.jpg') center/cover; }
+.portfolio-item:nth-child(2) { background: url('Photos/Second Year Project.jpg') center/cover; }
 .portfolio-item:nth-child(3) { background: url('Photos/Mine.jpeg') center/cover; }
 
 .portfolio-overlay {
