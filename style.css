@@ -16,10 +16,14 @@
     --border-color: #1e293b;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    /* Fix for scroll problem: allow auto/vertical overflow capability */
+    overflow-x: hidden;
     background-color: var(--bg-dark);
     color: var(--text-main);
 }
@@ -101,23 +105,20 @@ html, body {
     box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* Main Container - Fullpage Scrolling Structure */
+/* Main Container Layout */
 .main-container {
     width: 100%;
-    height: 100vh;
     position: relative;
-    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .section {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0 80px;
-    overflow: hidden;
+    padding: 100px 80px 60px 80px;
 }
 
 .content-wrapper {
@@ -144,7 +145,6 @@ html, body {
     z-index: 1;
 }
 
-/* Add custom subtle mechanical gear motifs via CSS patterns */
 .home-section::after {
     content: "";
     position: absolute;
